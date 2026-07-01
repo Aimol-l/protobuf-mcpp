@@ -1,0 +1,41 @@
+[package]
+name        = "protobuf"
+version     = "3.19.1"
+description = "Protocol Buffers - Google's data interchange format (modularized from OpenCV 3rdparty)"
+license     = "Apache-2.0"
+standard    = "c++23"
+
+[toolchain]
+default = "gcc@16.1.0"
+
+[build]
+include_dirs = ["src"]
+defines      = ["HAVE_PTHREAD=1"]
+ldflags      = ["-lpthread"]
+
+cxxflags = [
+    "-Wno-deprecated-declarations",
+    "-Wno-deprecated",
+    "-Wno-unused-parameter",
+    "-Wno-unused-variable",
+    "-Wno-unused-function",
+    "-Wno-unused-but-set-variable",
+    "-Wno-sign-compare",
+    "-Wno-shadow",
+    "-Wno-invalid-offsetof",
+    "-Wno-implicit-fallthrough",
+    "-Wno-unused-local-typedefs",
+    "-Wno-array-bounds",
+    "-Wno-pedantic",
+]
+
+[target.linux.build]
+cxxflags = [
+    "-Wno-class-memaccess",
+    "-Wno-stringop-overflow",
+    "-Wno-stringop-overread",
+    "-Wno-extra",
+]
+
+[targets.protobuf]
+kind = "lib"
