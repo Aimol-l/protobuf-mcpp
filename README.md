@@ -1,7 +1,7 @@
 # protobuf (mcpp)
 
 Protocol Buffers 3.19.1 packaged as a **C++23 named module** for the
-[ mcpp ](https://github.com/mcpp-community/mcpp) build tool.
+[mcpp](https://github.com/mcpp-community/mcpp) build tool.
 
 The library itself is the classic protobuf source (sourced from OpenCV's
 `3rdparty` tree) compiled as a normal `libprotobuf`. On top of it,
@@ -11,7 +11,7 @@ instead of pulling in dozens of headers.
 
 ## Layout
 
-```
+```text
 mcpp.toml              package + build manifest
 src/
   protobuf.cppm        module interface — global module fragment + re-exports
@@ -76,6 +76,5 @@ without an explicit `export using`. The wrapper does two things:
 
 ## License
 
-Google protobuf is covered by the BSD-style license in
-[LICENSE](LICENSE). The packaging metadata in `mcpp.toml` declares
-`Apache-2.0` for the module wrapper.
+BSD-3-Clause — see [LICENSE](LICENSE). The same license is declared in
+`mcpp.toml` and the generated `target/dist/protobuf.lua`.
