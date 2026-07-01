@@ -4,6 +4,7 @@ version     = "3.19.1"
 description = "Protocol Buffers - Google's data interchange format (modularized from OpenCV 3rdparty)"
 license     = "Apache-2.0"
 standard    = "c++23"
+repo        = "https://github.com/Aimol-l/protobuf-mcpp.git"
 
 [toolchain]
 default = "gcc@16.1.0"
